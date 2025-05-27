@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>论文笔记：大数据平台上的隐私保护及合规关键技术研究 | Hexo</title><meta name="author" content="Yanjun Bi"><meta name="copyright" content="Yanjun Bi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="7. 大数据平台上的隐私保护及合规关键技术研究7.1 论文信息 作者：杨露   年份：2021年   研究机构：四川大学计算机学院   主要内容：提出一种自动抽取隐私政策中的合规规则的方法，并设计基于图匹配的合规分析方法，以评估大数据平台的数据处理合规性。   7.2 问题分析 隐私政策中目的表达句法特征不明显，难以准确抽取； 大数据平台审计日志缺乏支持数据使用目的的隐私合规性分析能力。   7.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文笔记：大数据平台上的隐私保护及合规关键技术研究">
+<meta property="og:url" content="http://yanjunbi19.asia/2024/09/23/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="7. 大数据平台上的隐私保护及合规关键技术研究7.1 论文信息 作者：杨露   年份：2021年   研究机构：四川大学计算机学院   主要内容：提出一种自动抽取隐私政策中的合规规则的方法，并设计基于图匹配的合规分析方法，以评估大数据平台的数据处理合规性。   7.2 问题分析 隐私政策中目的表达句法特征不明显，难以准确抽取； 大数据平台审计日志缺乏支持数据使用目的的隐私合规性分析能力。   7.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yanjunbi19.asia/img/bb.jpg">
+<meta property="article:published_time" content="2024-09-23T14:55:59.000Z">
+<meta property="article:modified_time" content="2025-05-27T10:51:25.782Z">
+<meta property="article:author" content="Yanjun Bi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yanjunbi19.asia/img/bb.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "论文笔记：大数据平台上的隐私保护及合规关键技术研究",
+  "url": "http://yanjunbi19.asia/2024/09/23/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/",
+  "image": "http://yanjunbi19.asia/img/bb.jpg",
+  "datePublished": "2024-09-23T14:55:59.000Z",
+  "dateModified": "2025-05-27T10:51:25.782Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yanjun Bi",
+      "url": "http://yanjunbi19.asia/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yanjunbi19.asia/2024/09/23/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '论文笔记：大数据平台上的隐私保护及合规关键技术研究',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">论文笔记：大数据平台上的隐私保护及合规关键技术研究</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">论文笔记：大数据平台上的隐私保护及合规关键技术研究</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-23T14:55:59.000Z" title="发表于 2024-09-23 22:55:59">2024-09-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-27T10:51:25.782Z" title="更新于 2025-05-27 18:51:25">2025-05-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="7-大数据平台上的隐私保护及合规关键技术研究"><a href="#7-大数据平台上的隐私保护及合规关键技术研究" class="headerlink" title="7. 大数据平台上的隐私保护及合规关键技术研究"></a>7. 大数据平台上的隐私保护及合规关键技术研究</h1><h2 id="7-1-论文信息"><a href="#7-1-论文信息" class="headerlink" title="7.1 论文信息"></a>7.1 论文信息</h2><ul>
+<li><strong>作者</strong>：杨露  </li>
+<li><strong>年份</strong>：2021年  </li>
+<li><strong>研究机构</strong>：四川大学计算机学院  </li>
+<li><strong>主要内容</strong>：提出一种自动抽取隐私政策中的合规规则的方法，并设计基于图匹配的合规分析方法，以评估大数据平台的数据处理合规性。</li>
+</ul>
+<hr>
+<h2 id="7-2-问题分析"><a href="#7-2-问题分析" class="headerlink" title="7.2 问题分析"></a>7.2 问题分析</h2><ol>
+<li>隐私政策中目的表达句法特征不明显，难以准确抽取；</li>
+<li>大数据平台审计日志缺乏支持数据使用目的的隐私合规性分析能力。</li>
+</ol>
+<hr>
+<h2 id="7-3-研究方案"><a href="#7-3-研究方案" class="headerlink" title="7.3 研究方案"></a>7.3 研究方案</h2><h3 id="1-目的感知规则（PAR）"><a href="#1-目的感知规则（PAR）" class="headerlink" title="1. 目的感知规则（PAR）"></a>1. 目的感知规则（PAR）</h3><p>定义四元组：PAR &#x3D; {Actor, Action, Data Object, Purpose}。</p>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_53.png" alt="图7.1 目的感知规则示意图" />
+</div>
+
+<blockquote>
+<p><strong>图7.1 目的感知规则示意图</strong></p>
+</blockquote>
+<h3 id="2-抽取方法流程图"><a href="#2-抽取方法流程图" class="headerlink" title="2. 抽取方法流程图"></a>2. 抽取方法流程图</h3><div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_54.png" alt="图7.2 目的感知规则抽取方法流程图" />
+</div>
+
+<blockquote>
+<p><strong>图7.2 目的感知规则抽取方法流程图</strong></p>
+</blockquote>
+<h3 id="3-合规验证方法"><a href="#3-合规验证方法" class="headerlink" title="3. 合规验证方法"></a>3. 合规验证方法</h3><p>构建数据规则图和数据处理图，统一表达数据规则和处理过程。</p>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_55.png" alt="图7.3 数据规则图模型" />
+</div>
+
+<blockquote>
+<p><strong>图7.3 数据规则图模型</strong></p>
+</blockquote>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_56.png" alt="图7.4 数据处理图模型" />
+</div>
+
+<blockquote>
+<p><strong>图7.4 数据处理图模型</strong></p>
+</blockquote>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_57.png" alt="图7.5 合规分析算法" />
+</div>
+
+<blockquote>
+<p><strong>图7.5 合规分析算法</strong></p>
+</blockquote>
+<hr>
+<h2 id="7-4-实验评估"><a href="#7-4-实验评估" class="headerlink" title="7.4 实验评估"></a>7.4 实验评估</h2><h3 id="1-规则抽取实验"><a href="#1-规则抽取实验" class="headerlink" title="1. 规则抽取实验"></a>1. 规则抽取实验</h3><ul>
+<li>600 条句子作为实验数据集；</li>
+</ul>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_58.png" alt="图7.6 数据集情况" />
+</div>
+
+<blockquote>
+<p><strong>图7.6 数据集情况</strong></p>
+</blockquote>
+<ul>
+<li>显式目的抽取精确率高但召回率低；</li>
+<li>隐式目的抽取依赖 SRL 工具，效果一般；</li>
+<li>改进 SwiRL 模型后显著提升隐式目的抽取效果。</li>
+</ul>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_59.png" alt="图7.7 显式目的的抽取结果" />
+</div>
+
+<blockquote>
+<p><strong>图7.7 显式目的的抽取结果</strong></p>
+</blockquote>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_60.png" alt="图7.8 隐式目的的抽取结果" />
+</div>
+
+<blockquote>
+<p><strong>图7.8 隐式目的的抽取结果</strong></p>
+</blockquote>
+<div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_61.png" alt="图7.9 改进后的SwiRL模型实现的隐式目的的抽取结果" />
+</div>
+
+<blockquote>
+<p><strong>图7.9 改进后的SwiRL模型实现的隐式目的的抽取结果</strong></p>
+</blockquote>
+<h3 id="2-合规验证方法实验"><a href="#2-合规验证方法实验" class="headerlink" title="2. 合规验证方法实验"></a>2. 合规验证方法实验</h3><div style="text-align:center">
+  <img src="/image/大数据平台上的隐私保护及合规关键技术研究/image_62.png" alt="图7.10 隐私规则抽取对比试验" />
+</div>
+
+<blockquote>
+<p><strong>图7.10 隐私规则抽取对比试验</strong></p>
+</blockquote>
+<hr>
+<h2 id="7-5-优缺点"><a href="#7-5-优缺点" class="headerlink" title="7.5 优缺点"></a>7.5 优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>实现了对隐私政策中数据使用目的的自动抽取；</li>
+<li>提出显式与隐式目的表达方式，提高覆盖率；</li>
+<li>使用图结构建模数据处理规则和过程，便于合规性分析。</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>语义角色标注模型依赖人工标注，效率不高。</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://yanjunbi19.asia">Yanjun Bi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://yanjunbi19.asia/2024/09/23/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/">http://yanjunbi19.asia/2024/09/23/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://yanjunbi19.asia" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/bb.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/bb.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yanjun Bi</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E5%8F%8A%E5%90%88%E8%A7%84%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6"><span class="toc-number">1.</span> <span class="toc-text">7. 大数据平台上的隐私保护及合规关键技术研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E8%AE%BA%E6%96%87%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.</span> <span class="toc-text">7.1 论文信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-number">1.2.</span> <span class="toc-text">7.2 问题分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E7%A0%94%E7%A9%B6%E6%96%B9%E6%A1%88"><span class="toc-number">1.3.</span> <span class="toc-text">7.3 研究方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%9B%AE%E7%9A%84%E6%84%9F%E7%9F%A5%E8%A7%84%E5%88%99%EF%BC%88PAR%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 目的感知规则（PAR）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8A%BD%E5%8F%96%E6%96%B9%E6%B3%95%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 抽取方法流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%90%88%E8%A7%84%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 合规验证方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-%E5%AE%9E%E9%AA%8C%E8%AF%84%E4%BC%B0"><span class="toc-number">1.4.</span> <span class="toc-text">7.4 实验评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A7%84%E5%88%99%E6%8A%BD%E5%8F%96%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 规则抽取实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%88%E8%A7%84%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 合规验证方法实验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">1.5.</span> <span class="toc-text">7.5 优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">1.5.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">1.5.2.</span> <span class="toc-text">缺点</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/" title="软考系统架构师论文万能素材整理">软考系统架构师论文万能素材整理</a><time datetime="2025-05-22T04:55:34.000Z" title="发表于 2025-05-22 12:55:34">2025-05-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/20/androguard%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="Androguard基本使用">Androguard基本使用</a><time datetime="2025-05-20T05:52:29.123Z" title="发表于 2025-05-20 13:52:29">2025-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/28/%E6%81%B6%E8%A1%A5%E7%AE%97%E6%B3%95/" title="无标题">无标题</a><time datetime="2025-03-28T03:43:53.707Z" title="发表于 2025-03-28 11:43:53">2025-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/12/18/hello-world/" title="Hello World">Hello World</a><time datetime="2024-12-18T14:55:34.000Z" title="发表于 2024-12-18 22:55:34">2024-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/12/09/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PPCA%20Privacy%20Policy%20Compliance%20Analysis%20for%20Person/" title="论文笔记：PPCA:Privacy Policy Compliance Analysis for Personal Information Protection Law">论文笔记：PPCA:Privacy Policy Compliance Analysis for Personal Information Protection Law</a><time datetime="2024-12-09T02:55:34.000Z" title="发表于 2024-12-09 10:55:34">2024-12-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Yanjun Bi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br><div class="footer-beian"></div></div><a href="https://beian.mps.gov.cn/#/query/webSearch?code=150202000366" rel="noreferrer" target="_blank" style="background: url(/img/beian.png) no-repeat left center; background-size: 16px 16px; padding-left: 20px; margin-right: 15px;">蒙公网安备150202000366号</a><a href="https://beian.miit.gov.cn" target="_blank">蒙ICP备2025024138号</a></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

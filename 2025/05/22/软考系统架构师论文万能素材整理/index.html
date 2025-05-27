@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>软考系统架构师论文万能素材整理 | Hexo</title><meta name="author" content="Yanjun Bi"><meta name="copyright" content="Yanjun Bi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="0.前言本文分享一些参加该考试的失败经验，以及一些论文写作素材。 考试经验第一次考试，复习了七天。选择刷的少，没过。案例走狗屎运，擦线过。论文题目四个都不懂，我选了模型驱动架构设计方法，然后瞎编，居然过了。第二次考试，复习了一个月。选择案例倒是擦边过了。论文我选了论多源异构数据集成方法，这次失误了，没编好。战绩如下： 从我的失败经验看，如果好好的刷往年题，选择案例不难通过。由于第一次考试论文走了狗">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软考系统架构师论文万能素材整理">
+<meta property="og:url" content="http://yanjunbi19.asia/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0.前言本文分享一些参加该考试的失败经验，以及一些论文写作素材。 考试经验第一次考试，复习了七天。选择刷的少，没过。案例走狗屎运，擦线过。论文题目四个都不懂，我选了模型驱动架构设计方法，然后瞎编，居然过了。第二次考试，复习了一个月。选择案例倒是擦边过了。论文我选了论多源异构数据集成方法，这次失误了，没编好。战绩如下： 从我的失败经验看，如果好好的刷往年题，选择案例不难通过。由于第一次考试论文走了狗">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yanjunbi19.asia/img/bb.jpg">
+<meta property="article:published_time" content="2025-05-22T04:55:34.000Z">
+<meta property="article:modified_time" content="2025-05-26T01:06:35.151Z">
+<meta property="article:author" content="Yanjun Bi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yanjunbi19.asia/img/bb.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "软考系统架构师论文万能素材整理",
+  "url": "http://yanjunbi19.asia/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/",
+  "image": "http://yanjunbi19.asia/img/bb.jpg",
+  "datePublished": "2025-05-22T04:55:34.000Z",
+  "dateModified": "2025-05-26T01:06:35.151Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yanjun Bi",
+      "url": "http://yanjunbi19.asia/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yanjunbi19.asia/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '软考系统架构师论文万能素材整理',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">软考系统架构师论文万能素材整理</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">软考系统架构师论文万能素材整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-05-22T04:55:34.000Z" title="发表于 2025-05-22 12:55:34">2025-05-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-05-26T01:06:35.151Z" title="更新于 2025-05-26 09:06:35">2025-05-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h3><p>本文分享一些参加该考试的失败经验，以及一些论文写作素材。</p>
+<h5 id="考试经验"><a href="#考试经验" class="headerlink" title="考试经验"></a>考试经验</h5><p>第一次考试，复习了七天。选择刷的少，没过。案例走狗屎运，擦线过。论文题目四个都不懂，我选了模型驱动架构设计方法，然后瞎编，居然过了。<br><img src="/image/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/image-1.png" alt="alt text"><br>第二次考试，复习了一个月。选择案例倒是擦边过了。论文我选了论多源异构数据集成方法，这次失误了，没编好。战绩如下：<br><img src="/image/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/image-2.png" alt="alt text"></p>
+<p>从我的失败经验看，如果好好的刷往年题，选择案例不难通过。由于第一次考试论文走了狗屎运，让我觉得自己在编论文方面简直是天赋异禀，所以第二次很快就翻车了，囧。总结我的失败经历，我认为写论文有三点很重要。</p>
+<h5 id="论文写作注意事项"><a href="#论文写作注意事项" class="headerlink" title="论文写作注意事项"></a>论文写作注意事项</h5><ul>
+<li>回应题目。一般题目会给三个论点，写作过程要紧扣论点。适当用<strong>加粗</strong>，强调论点。比如用总分形式，某段的第一句就加粗，强调论点，让老师快速看到得分点。</li>
+<li>技术选型的理由。需要陈述现存问题，为啥使用这个技术，然后再说技术的知识点。</li>
+<li>结合实际问题。理论性描述内容只是占一小部分，更多要结合项目，讨论实际问题。这样才显得真实一些（心虚.jpg）。</li>
+</ul>
+<p>目前的准备方案是，先设定一个具体的项目，然后往里套题目相关的知识点，随缘发散。这里记录一些我必考期间整理的各类论文写作素材，也可帮助案例的复习。<br>希望我三战可以通过这项考试吧，阿门！</p>
+<h3 id="1-论文摘要-背景-结尾模板"><a href="#1-论文摘要-背景-结尾模板" class="headerlink" title="1.论文摘要+背景+结尾模板"></a>1.论文摘要+背景+结尾模板</h3><p>从政府招标网搜了一个景区票务管理系统。稍加改动。</p>
+<h6 id="1-1-摘要（270字左右）"><a href="#1-1-摘要（270字左右）" class="headerlink" title="1.1 摘要（270字左右）"></a>1.1 摘要（270字左右）</h6><p>为解决多景区管理分散、客户体验不佳、运营效率低下及规则配置不灵活等问题，我公司于2023年4月承接了某大型景区票务管理系统的建设任务。在该项目中，我担任系统架构设计师，负责整个项目的架构设计与关键技术选型工作。本文结合我在该项目中的实践，详细论述xxxxxxx(论文题目)的具体应用与实践过程。通过采用xxxxxxxxxxxx（一句话简要说明论文主题），构建了一个高可用、易扩展、可配置的智能化票务管理平台，有效支撑了景区运营管理需求。整个项目历时 10 个月开发完成，并于 2024 年 2 月正式交付并稳定运行至今，各项功能和性能指标均达到了客户要求，得到了客户和各级领导的一致好评。</p>
+<h6 id="1-2-背景（570字左右）"><a href="#1-2-背景（570字左右）" class="headerlink" title="1.2 背景（570字左右）"></a>1.2 背景（570字左右）</h6><p>近年来，随着旅游业的快速发展与游客消费行为的不断升级，传统票务管理模式在灵活性、扩展性以及用户体验等方面已难以满足现代景区在集团化运营、智能化管理和多元化服务方面的新需求。为此，我公司承接了某大型景区票务管理系统的建设项目，旨在打造一个统一、高效、智能的票务管理平台。</p>
+<p>该系统面向集团管理层、景区运营人员及广大游客，全面覆盖票务配置、营销活动管理、订单处理等全链路业务流程，构建了一个集票务交易、营销策略配置、客户管理与数据分析于一体的智能化票务管理平台，有效支撑景区高效管理和游客便捷体验的核心目标。项目初期团队由12人组成，涵盖产品、前端、后端、测试与运维等多个角色，随着系统功能不断完善与业务需求增长，团队逐步扩展至25人。系统采用模块化设计理念，将整个系统划分为四大核心功能模块，其中票务交易服务负责订单创建、支付回调、核销流程、退款改签等核心交易环节；票务管理服务支持票价策略、优惠活动、联票组合、库存预警等功能的灵活配置；客户管理服务支持构建会员体系、游客画像、黑名单管理及精准营销能力；数据与基础支撑服务实现数据可视化、客流预测、权限控制、日志审计等基础能力。</p>
+<p>系统底层基于 SpringBoot、MyBatis 等主流开发框架，结合 Redis、RocketMQ、Docker 等中间件与容器化技术，保障了系统的高性能、良好的可维护性与弹性伸缩能力，为景区数字化转型提供了坚实的技术支撑。 </p>
+<h6 id="1-3-结尾（290字左右）"><a href="#1-3-结尾（290字左右）" class="headerlink" title="1.3 结尾（290字左右）"></a>1.3 结尾（290字左右）</h6><p>最终，经过 10 个月的研发，该系统于 2024 年2 月顺利通过验收并上线，至今运行稳定，多次节假日高峰期间系统运行平稳，各项业务功能正常运转，得到了客户和领导的充分肯定。虽然项目取得了成功，但我们也看到了一些不足之处，其中需求频繁变更导致项目团队经常加班是比较突出的问题。针对这个问题，我们采取了以下两个措施：一是规范需求变更流程，提升变更成本，以避免过度的需求变更；二是通过灵活的配置和架构设计，低成本响应需求变更。通过该项目的开发，我在系统分析与设计方面积累了不少宝贵的经验，为我后续的工作提供了很大的帮助。这也激励着我不断学习，不断丰富自己的知识体系，为将来能够应对更复杂的工作做好准备。</p>
+<h3 id="主题1：软件架构评估ATAM"><a href="#主题1：软件架构评估ATAM" class="headerlink" title="主题1：软件架构评估ATAM"></a>主题1：软件架构评估ATAM</h3><h5 id="摘要部分"><a href="#摘要部分" class="headerlink" title="摘要部分"></a>摘要部分</h5><p>改动主旨句：<br>本文结合我在该项目中的实践，介绍 ATAM 方法的具体应用过程，通过建立质量属性效用树，识别出多个关键的风险点、敏感点和权衡点，并通过场景驱动的测试验证了架构在性能、可用性、安全性及可修改性等方面的可行性。</p>
+<h5 id="背景部分"><a href="#背景部分" class="headerlink" title="背景部分"></a>背景部分</h5><p>照抄</p>
+<h5 id="技术选型部分论述"><a href="#技术选型部分论述" class="headerlink" title="技术选型部分论述"></a>技术选型部分论述</h5><p>ATAM 方法是一种基于场景的软件架构评估方法，主要针对性能、可用性、安全性和可修改性，在系统开发之前，对这些质量属性进行评价和折中。这种方式能够将抽象的质量属性转化为具体的使用情境，从而帮助评估人员更直观地理解架构在实际运行中可能面临的问题。。为了识别项目中潜在的风险，及早发现架构设计中的缺陷和错误，经过项目组成员充分讨论，我们决定采用 ATAM 方法对系统的架构进行评估。</p>
+<h5 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h5><p>下文结合我在该项目中的实践，介绍 ATAM 方法的具体应用过程，包括描述介绍阶段、调查分析阶段、测试阶段和报告阶段</p>
+<p><strong>在该描述和介绍阶段，评估小组明确了评估的目标和范围，我作为系统架构设计师向评估小组详细介绍了待评估的系统架构</strong>。我们采用模块视图、部署视图、数据视图等多种架构视图来呈现系统的结构特征，并结合 UML 图、组件图等方式说明各服务之间的交互关系。同时，我们也明确了系统所采用的技术栈：如基于 Spring Cloud 的微服务架构、使用 Nacos 做服务注册与配置中心、采用 MySQL 分库分表策略支持高并发访问等。这一阶段的目标是让评估小组全面理解系统的上下文、技术选型及其对质量属性的影响。</p>
+<p><strong>在调查分析阶段，我们围绕系统的关键质量属性展开深入探讨，建立质量属性效用树，并分析风险点、敏感点和权衡点</strong>。具体而言：</p>
+<p>性能相关 ：“系统在节假日等高峰期需支持每秒处理 5000 次下单请求。”<br>可用性相关 ：“当某个服务节点宕机时，系统应能在 1 秒内自动切换至备用节点。”<br>安全性相关 ：“用户敏感信息必须加密存储，接口调用需通过 OAuth2 认证授权。”<br>可修改性相关 ：“新增一种营销类型应控制在一周内完成开发与上线。”<br>随后，我们对这些场景逐一进行评估，判断当前架构是否能够满足需求，并识别出可能存在的风险点。例如，在性能方面，我们发现订单服务与库存服务存在强耦合，可能成为性能瓶颈；在可用性方面，服务熔断机制虽然存在，但缺乏动态阈值调整能力，可能导致误判；在安全性方面，尽管有认证机制，但未对敏感操作做细粒度的权限控制；在可修改性方面，营销规则引擎的封装程度不足，导致每次新增规则都需要较大改动。</p>
+<p>最终，我们建立了质量属性效用树，完成了风险点、敏感点和权衡点的分析，形成了初步的架构评估结论。</p>
+<p><strong>在测试阶段，我们对各类质量属性进行了优先级排序，以确保测试资源能够聚焦于最核心的需求上</strong>。在性能方面，我们使用 JMeter 工具模拟高并发下单场景，验证系统在每秒 5000 次请求下的响应时间和吞吐量；在可用性方面，人为制造服务节点宕机和网络延迟等故障，观察服务注册中心能否及时切换、熔断机制是否生效；在安全性方面，我们模拟非法访问尝试，检查鉴权机制是否可靠；在可修改性方面，我们尝试新增一种促销规则，记录所需时间与代码修改范围，评估架构的适应能力。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>通过 ATAM 架构评估方法的应用，我们在系统开发早期识别出了多个潜在风险点，明确了性能、可用性、安全性和可修改性方面的关键挑战，并提出了针对性的改进建议。例如，优化服务间的解耦设计、增强熔断机制的灵活性、完善权限控制策略、提升营销规则的可插拔性等。</p>
+<p>更重要的是，这次评估过程让我深刻认识到：软件架构不仅是技术决策的结果，更是对质量属性权衡的艺术 。通过 ATAM 这种基于场景的评估方式，我们得以将抽象的非功能性需求转化为可执行、可验证的评估项，使得架构设计更加科学、合理、可控。</p>
+<p>未来，我们将继续完善架构评估机制，推动 ATAM 与其他建模方法（如 UML、OOA）相结合，进一步提升系统分析与设计的能力与水平，为高质量交付打下坚实基础。</p>
+<h3 id="主题2：面向对象分析方法"><a href="#主题2：面向对象分析方法" class="headerlink" title="主题2：面向对象分析方法"></a>主题2：面向对象分析方法</h3><h5 id="摘要部分-1"><a href="#摘要部分-1" class="headerlink" title="摘要部分"></a>摘要部分</h5><p>改动主旨句：<br>本文结合我在该项目中的实践，详细面向对象分析（OOA）方法的具体应用 ，通过统一建模语言（UML）对业务流程、实体关系和交互逻辑进行建模，为后续设计与开发提供了清晰的结构化指导。</p>
+<h5 id="背景部分-1"><a href="#背景部分-1" class="headerlink" title="背景部分"></a>背景部分</h5><p>照抄</p>
+<h5 id="技术选型部分论述-1"><a href="#技术选型部分论述-1" class="headerlink" title="技术选型部分论述"></a>技术选型部分论述</h5><p>面向对象分析（Object-Oriented Analysis, OOA）是一种以对象为核心来描述系统结构和行为的方法。它强调从现实世界中抽象出对象模型，并建立类与类之间的关系，从而提升系统的结构化程度和复用能力。要想高质量地完成该项目，选择合适的系统需求分析方法，建立正确的系统逻辑模型至关重要。考虑到该项目的复杂性以及可扩展性的要求，通过项目团队成员充分讨论，我们一致决定采用面向对象分析方法来建立系统的逻辑模型。</p>
+<p>面向对象分析的主要步骤包括建立用例模型和分析模型。用例模型是从参与者的角度来描述系统提供的功能和服务，由用例图和用例规约组成。建立用例模型的过程包括识别参与者、合并需求获得用例、细化用例描述、调整用例模型等步骤，其中调整用例模型步骤不是必需的。分析模型用来描述系统的逻辑模型，包括对象模型和动态模型。对象模型描述业务领域中的核心概念和实体，动态模型描述对象之间如何交互协作以实现特定的功能。对象模型用类图和对象图描述，动态模型用状态图、顺序图、活动图等动态图来描述。建立分析模型的过程包括定义概念类、识别类之间的关系、为类添加职责和建立交互图等步骤。</p>
+<h5 id="主要内容-1"><a href="#主要内容-1" class="headerlink" title="主要内容"></a>主要内容</h5><p>下文将结合我在该项目中的实践，详细阐述用例模型、对象模型和动态模型的建立过程。</p>
+<p><strong>在项目的需求分析阶段，我们首先使用用例模型对系统功能进行整体建模</strong>。由于系统涉及多个用户角色（如游客、管理员、运营人员、第三方支付平台等），且各角色之间的操作存在交叉与依赖，因此在识别参与者与用例时面临较大的复杂度。例如，“游客购票”这一核心用例需要与“库存预警”、“支付回调”、“订单查询”等多个子用例形成关联，而这些用例又可能被不同角色所触发。针对这一问题，我们采取了分层建模的方式：先绘制主干用例图，明确系统核心功能边界；再针对每个参与者单独绘制其视角下的用例图，最后通过整合与优化消除冗余、合并相似用例，最终形成一套结构清晰、层次分明的用例模型。这种做法不仅帮助我们厘清了复杂的业务关系，也为后续开发任务的分配提供了依据。</p>
+<p><strong>在对象模型的建立过程中，我们采用了类图作为主要建模工具</strong>。然而，面对系统中大量的业务实体（如Ticket、Order、User、Promotion等），我们发现类之间的关系并非一目了然，尤其是在多景区、多票种、多促销规则的背景下，类继承、聚合、依赖等关系错综复杂。例如，在门票类型的设计上，我们需要同时支持单票、联票、套票等多种形式，每种形式的价格计算方式也有所不同。最初我们尝试使用条件判断的方式进行处理，但很快发现这种方式缺乏扩展性，一旦新增票种就需要修改原有逻辑。于是我们引入了面向对象的多态机制，将不同类型的门票抽象为Ticket的子类，并通过策略模式封装价格计算逻辑，使得系统具备良好的可扩展性。此外，为了增强类职责的清晰性，我们还在类图中加入了职责注释，确保每个类只承担单一职责，降低耦合度。</p>
+<p><strong>在动态模型的建立方面，我们主要使用了顺序图和状态图来描述对象间的交互行为和状态变化</strong>。在订单处理流程中，我们发现传统的文字描述很难准确表达各个组件之间的调用顺序与数据流转，特别是在异步回调、事务一致性等场景下，容易产生理解偏差。为此，我们绘制了订单从创建到支付成功再到核销的全过程顺序图，清晰展示了多个服务之间的调用顺序，并标注了关键的异常处理节点。此外，针对订单生命周期管理，我们还绘制了状态图，涵盖了新建、已支付、已核销、退款中、已退款等多种状态及其转换条件。通过这些动态模型，我们不仅提高了开发团队对系统行为的理解，也为后期测试用例的设计提供了有力支持。</p>
+<h5 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h5><p>通过面向对象分析方法的运用，我们成功地建立了系统的逻辑模型，为后续阶段工作的顺利进行提供了有力的支撑。用例模型帮助我们准确把握系统功能边界，对象模型确保了系统结构的清晰与职责的明确，动态模型则增强了对系统行为的理解与验证。这一系列建模工作显著提高了系统设计的质量和效率，也为团队协作和后期维护打下了坚实基础。未来，我们计划进一步优化建模流程，探索自动化建模工具的应用，持续提升系统分析与设计的能力与水平。</p>
+<h3 id="主题3：测试驱动的开发"><a href="#主题3：测试驱动的开发" class="headerlink" title="主题3：测试驱动的开发"></a>主题3：测试驱动的开发</h3><h5 id="摘要部分-2"><a href="#摘要部分-2" class="headerlink" title="摘要部分"></a>摘要部分</h5><p>改动主旨句：<br>本文结合我在该项目中的实践，详细论述测试驱动开发（TDD）在软件架构维护与实施过程中的具体应用与价值。通过采用“先写测试用例、再实现功能”的开发流程，构建了一个高可用、易扩展、可配置的智能化票务管理平台，有效支撑了景区运营管理需求。</p>
+<h5 id="背景部分-2"><a href="#背景部分-2" class="headerlink" title="背景部分"></a>背景部分</h5><p>照抄</p>
+<h5 id="技术选型部分论述-2"><a href="#技术选型部分论述-2" class="headerlink" title="技术选型部分论述"></a>技术选型部分论述</h5><p>测试驱动开发（Test-Driven Development，简称 TDD）是一种软件开发方法论，它强调在编写功能代码之前先编写测试代码。本项目所构建的景区票务管理系统具有高度复杂的业务逻辑和频繁变更的配置规则，尤其是在票价策略、优惠活动、联票组合等核心模块中，不同景区、不同时段、不同用户群体之间存在大量差异化的定价和营销策略。这种灵活性要求系统具备良好的可维护性和可扩展性，以应对不断变化的业务需求。</p>
+<p>在以往类似项目中，我们曾因采用“先编码后测试”的开发方式而遭遇严重的回归缺陷问题，特别是在多人协作背景下，接口定义不清、逻辑冲突频发，给后期维护带来极大困难。因此，在本项目中，我们意识到必须从架构设计之初就引入一种能够保障代码质量、提升开发效率的工程实践。</p>
+<p>因此，我们在项目中引入了测试驱动开发（TDD）作为核心开发方法。通过“先写测试用例、再实现功能”的方式，确保每个功能模块在开发初期就有明确的行为定义和质量边界。这种方式不仅提升了代码的可读性和一致性，也为后续的功能扩展和规则调整提供了稳定的基础保障。TDD 的实施，使我们在面对频繁变更的业务规则时，能够更有信心地进行重构和优化，从而真正实现高质量、可持续交付的目标。 </p>
+<h5 id="主要内容-2"><a href="#主要内容-2" class="headerlink" title="主要内容"></a>主要内容</h5><p>在本项目的开发过程中，我们系统性地推进了测试驱动开发（TDD）方法的落地实施，我们充分结合了白盒测试、黑盒测试与回归测试等多种测试方法 ，构建了一个多层次、多维度的质量保障体系。</p>
+<p><strong>为了提高单元测试的效率，我们制定了白盒测试的覆盖标准。</strong>白盒测试的覆盖范围从低到高包括语句覆盖、判定覆盖、条件覆盖、判定&#x2F;条件覆盖、组合覆盖和路径覆盖。过高或过低的覆盖标准都会对项目产生不利影响，过高覆盖标准可能导致测试用例数量过多，从而消耗大量的实践和资源，增加了项目的总体成本。过低覆盖标准可能会导致一些重要的逻辑错误未被发现，从而影响软件的稳定性和用户体验。我们综合考虑项目需求和行业标准，在测试的全面性和测试成本之间找到了一个平衡点，制定了适合该项目的覆盖标准，对于非核心功能设定较为宽松的覆盖标准，对于核心功能以及资金相关、安全有关的功能设定较为严格的覆盖标准。例如，在订单金额计算模块中，我们通过白盒测试验证了不同折扣策略下的金额叠加顺序是否符合预期，避免了因运算优先级错误导致的财务问题。<br>又如，在支付回调状态处理模块中，我们模拟成功、失败、超时等多种状态，确保系统能正确识别并触发对应的业务流程。这些白盒测试用例不仅提升了代码健壮性，也为后期的功能扩展打下了良好基础。</p>
+<p><strong>为完全验证业务逻辑的完整性，引入了黑盒测试来增强系统行为的验证能力</strong>。尽管 TDD 以白盒测试为核心，但它并不替代黑盒测试。黑盒测试关注的是系统的外部行为 ，更贴近用户视角和真实场景，是对 TDD 所覆盖范围的重要补充。 在本项目中，我们认识到仅靠白盒测试无法完全验证业务逻辑的完整性，因此引入了黑盒测试来增强系统行为的验证能力。在优惠券核销流程中，我们通过黑盒测试模拟了多用户并发使用同一张优惠券的情况，验证系统是否能够正确控制使用次数。在票务库存预警模块中，我们模拟高并发请求，验证系统在压力下是否能准确触发预警机制。这些测试帮助我们发现了部分白盒测试未能覆盖的边界问题，显著提升了系统的稳定性和用户体验。</p>
+<p><strong>我们通过回归测试确保代码的更新符合用户的预期，并且不会引入新的错误</strong>。TDD 并不是一次性完成的开发过程，而是一个持续迭代与演进的过程。每一次代码变更都可能影响已有功能 ，因此必须通过回归测试确保变更的安全性。 在本项目中，我们建立了完善的回归测试机制，确保每次迭代后的系统仍然保持原有功能的正确性。因此，我们通过回归测试确保代码的更新符合用户的预期，并且不会引入新的错误。回归测试是指在软件开发过程中，当代码发生变更后，重新执行之前的测试用例以确保没有引入新的错误。</p>
+<h5 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h5><p>在本系统开发过程中，我们发现采用TDD后，集成测试和验收测试阶段的Bug数量明显下降。特别是在订单处理和支付回调等关键路径上，由于前期已经建立了详尽的测试覆盖，上线后的故障率显著低于以往项目。同时，自动化测试覆盖率高达85%以上，为持续集成和部署提供了强有力的支持。然而，也存在一些问题，例如传统开发过程都是先开发后测试，项目人员难以快速适应这种方式，此外，随着功能迭代，部分测试用例需要同步更新。未来，我们将继续完善培训体系和测试体系，推动 TDD 与集成测试、接口测试、契约测试等相结合，构建更加完整、高效的软件质量保障体系。</p>
+<h3 id="主题4：云原生架构"><a href="#主题4：云原生架构" class="headerlink" title="主题4：云原生架构"></a>主题4：云原生架构</h3><h5 id="摘要部分-3"><a href="#摘要部分-3" class="headerlink" title="摘要部分"></a>摘要部分</h5><p>面对系统需支持多景区统一管理、灵活配置票价策略与营销活动，并应对节假日高峰流量冲击等挑战，我们决定采用云原生架构作为系统的核心构建方式。通过服务化、弹性与自动化等关键原则，我们将系统划分为多个高内聚、低耦合的微服务模块，并基于 Kubernetes 实现资源动态伸缩与全链路自动化交付，显著提升了系统的稳定性、资源利用率与开发运维效率。</p>
+<h5 id="背景部分-3"><a href="#背景部分-3" class="headerlink" title="背景部分"></a>背景部分</h5><p>照抄</p>
+<h5 id="技术选型部分论述-3"><a href="#技术选型部分论述-3" class="headerlink" title="技术选型部分论述"></a>技术选型部分论述</h5><p>景区票务管理系统需要支持多个景区的统一管理，具备灵活配置票价策略、营销活动和会员体系的能力，同时还要应对节假日、旅游旺季等高峰时段带来的巨大流量冲击。传统的单体架构或简单的微服务架构已难以满足这些复杂场景下的高并发、快速响应和持续交付要求。为有效应对上述挑战，经过项目团队的充分讨论与技术评估，我们决定采用云原生架构来构建该系统。云原生架构的实施过程中需要遵循服务化、弹性、可观测、韧性和自动化等原则，其中服务化原则是指通过服务化架构把系统拆成多个微服务，每个微服务可以独立开发、部署和运行；弹性原则是指系统的部署规模可以随着业务量的变化而自动伸缩，无需根据事先的容量规划准备固定的资源；可观测原则是指相关人员可以实时掌握系统的运行情况以及各种质量指标，并及时处理发现的问题或对系统进行优化；自动化原则是指通过自动化工具实现整个软件交付和运维的自动化。</p>
+<h5 id="主要内容-3"><a href="#主要内容-3" class="headerlink" title="主要内容"></a>主要内容</h5><p><strong>服务化强调将系统按照业务能力划分为多个独立的服务单元，每个服务具有明确的边界和职责，并通过标准化接口与其他服务通信</strong>。服务化设计是我们在系统架构层面的核心实践之一。我们将整个票务系统按照业务能力划分为多个独立的服务单元，每个服务具有清晰的边界和职责，并通过标准化接口与其他服务通信。在本系统中，我们基于领域驱动设计（DDD）方法，将核心业务逻辑划分为四个关键领域：票务交易域、票务管理域、客户管理域以及数据支撑域，并分别对应为独立的微服务模块。例如，票务交易服务负责订单创建、支付回调、核销流程等核心交易环节；票务管理服务支持票价策略、优惠活动、联票组合等功能的灵活配置；客户管理服务提供会员体系构建、游客画像分析与黑名单管理能力；数据支撑服务则涵盖权限控制、日志审计、数据可视化等功能。各服务间通过 RESTful API 进行通信，并使用 OpenFeign 实现服务调用封装。这种服务化设计不仅提升了系统的可维护性与扩展性，也为后续的功能迭代与团队协作打下了坚实基础。</p>
+<p><strong>弹性指的是系统能够根据负载变化自动调整资源使用情况，以应对流量高峰和突发请求</strong>。系统应能根据访问量的变化动态调整资源分配，以应对节假日、促销活动等场景下的突发流量冲击。同时，系统还需具备良好的容错与故障恢复机制，确保在个别组件失效时仍能维持整体服务的可用性。在本项目中，我们依托 Kubernetes 平台，利用其 HPA（Horizontal Pod Autoscaler）机制实现了服务的弹性伸缩。例如，在“五一”假期前的高峰期，我们为票务交易、库存预警、支付回调等关键服务配置了弹性扩缩策略，设置最小副本数为3，最大副本数为10，目标 CPU 使用率为75%。实际运行数据显示，在流量高峰期间，相关服务的副本数量自动增加至8个，而在低谷期回落至3个，有效保障了系统响应能力的同时，也降低了约20%的云资源成本投入。</p>
+<p><strong>自动化是云原生架构的重要设计原则，强调通过工具链实现软件交付和运维流程的自动化</strong>。它贯穿整个应用生命周期，涵盖代码构建、测试、部署、发布、监控等多个环节。在本项目中，我们通过 开源CI&#x2F;CD 工具链Jenkins，为每个微服务模块配置了独立的 Pipeline，实现了从代码拉取、编译打包、镜像构建、镜像推送，到 Kubernetes 部署的全链路自动化流程。我们通过 Helm 封装 Kubernetes 应用部署模板，实现微服务的一键发布与参数化配置。每次服务更新均通过 Helm 进行版本控制，支持快速回滚和多环境部署。通过以上措施我们有效提高了开发效率，减少了部署过程中的人为错误，部署的成功率提高了一倍。</p>
+<h5 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h5><p>通过云原生架构的运用，我们提高了系统的稳定性、降低了成本并提高了开发效率。最终，项目交付上线，至今运行稳定，各项功能和性能指标均达到客户要求，得到了客户和各级领导的一致好评。虽然项目取得了成功，但我们也看到了一些不足之处，其中需求频繁变更导致项目团队经常加班是比较突出的问题。针对这个问题，我们采取了以下两个措施：一是规范需求变更流程，提升变更成本，以避免过度的需求变更；二是通过灵活的配置和架构设计，低成本响应需求变更。通过该项目的开发，我在系统分析与设计方面积累了不少宝贵的经验，为我后续的工作提供了很大的帮助。这也激励着我不断学习，不断丰富自己的知识体系，为将来能够应对更复杂的工作做好准备。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://yanjunbi19.asia">Yanjun Bi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://yanjunbi19.asia/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/">http://yanjunbi19.asia/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://yanjunbi19.asia" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/bb.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/bb.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yanjun Bi</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0.前言</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%80%83%E8%AF%95%E7%BB%8F%E9%AA%8C"><span class="toc-number">1.0.1.</span> <span class="toc-text">考试经验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.0.2.</span> <span class="toc-text">论文写作注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BA%E6%96%87%E6%91%98%E8%A6%81-%E8%83%8C%E6%99%AF-%E7%BB%93%E5%B0%BE%E6%A8%A1%E6%9D%BF"><span class="toc-number">2.</span> <span class="toc-text">1.论文摘要+背景+结尾模板</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-1-%E6%91%98%E8%A6%81%EF%BC%88270%E5%AD%97%E5%B7%A6%E5%8F%B3%EF%BC%89"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1.1 摘要（270字左右）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-2-%E8%83%8C%E6%99%AF%EF%BC%88570%E5%AD%97%E5%B7%A6%E5%8F%B3%EF%BC%89"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">1.2 背景（570字左右）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#1-3-%E7%BB%93%E5%B0%BE%EF%BC%88290%E5%AD%97%E5%B7%A6%E5%8F%B3%EF%BC%89"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">1.3 结尾（290字左右）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%981%EF%BC%9A%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0ATAM"><span class="toc-number">3.</span> <span class="toc-text">主题1：软件架构评估ATAM</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E9%83%A8%E5%88%86"><span class="toc-number">3.0.1.</span> <span class="toc-text">摘要部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E9%83%A8%E5%88%86"><span class="toc-number">3.0.2.</span> <span class="toc-text">背景部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E9%83%A8%E5%88%86%E8%AE%BA%E8%BF%B0"><span class="toc-number">3.0.3.</span> <span class="toc-text">技术选型部分论述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-number">3.0.4.</span> <span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.0.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%982%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">主题2：面向对象分析方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E9%83%A8%E5%88%86-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">摘要部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E9%83%A8%E5%88%86-1"><span class="toc-number">4.0.2.</span> <span class="toc-text">背景部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E9%83%A8%E5%88%86%E8%AE%BA%E8%BF%B0-1"><span class="toc-number">4.0.3.</span> <span class="toc-text">技术选型部分论述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9-1"><span class="toc-number">4.0.4.</span> <span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">4.0.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%983%EF%BC%9A%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%BC%80%E5%8F%91"><span class="toc-number">5.</span> <span class="toc-text">主题3：测试驱动的开发</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E9%83%A8%E5%88%86-2"><span class="toc-number">5.0.1.</span> <span class="toc-text">摘要部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E9%83%A8%E5%88%86-2"><span class="toc-number">5.0.2.</span> <span class="toc-text">背景部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E9%83%A8%E5%88%86%E8%AE%BA%E8%BF%B0-2"><span class="toc-number">5.0.3.</span> <span class="toc-text">技术选型部分论述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9-2"><span class="toc-number">5.0.4.</span> <span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-number">5.0.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%984%EF%BC%9A%E4%BA%91%E5%8E%9F%E7%94%9F%E6%9E%B6%E6%9E%84"><span class="toc-number">6.</span> <span class="toc-text">主题4：云原生架构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E9%83%A8%E5%88%86-3"><span class="toc-number">6.0.1.</span> <span class="toc-text">摘要部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E9%83%A8%E5%88%86-3"><span class="toc-number">6.0.2.</span> <span class="toc-text">背景部分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E9%83%A8%E5%88%86%E8%AE%BA%E8%BF%B0-3"><span class="toc-number">6.0.3.</span> <span class="toc-text">技术选型部分论述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9-3"><span class="toc-number">6.0.4.</span> <span class="toc-text">主要内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-3"><span class="toc-number">6.0.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/22/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%AE%BA%E6%96%87%E4%B8%87%E8%83%BD%E7%B4%A0%E6%9D%90%E6%95%B4%E7%90%86/" title="软考系统架构师论文万能素材整理">软考系统架构师论文万能素材整理</a><time datetime="2025-05-22T04:55:34.000Z" title="发表于 2025-05-22 12:55:34">2025-05-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/05/20/androguard%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="Androguard基本使用">Androguard基本使用</a><time datetime="2025-05-20T05:52:29.123Z" title="发表于 2025-05-20 13:52:29">2025-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/28/%E6%81%B6%E8%A1%A5%E7%AE%97%E6%B3%95/" title="无标题">无标题</a><time datetime="2025-03-28T03:43:53.707Z" title="发表于 2025-03-28 11:43:53">2025-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/12/18/hello-world/" title="Hello World">Hello World</a><time datetime="2024-12-18T14:55:34.000Z" title="发表于 2024-12-18 22:55:34">2024-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/12/09/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-PPCA%20Privacy%20Policy%20Compliance%20Analysis%20for%20Person/" title="论文笔记：PPCA:Privacy Policy Compliance Analysis for Personal Information Protection Law">论文笔记：PPCA:Privacy Policy Compliance Analysis for Personal Information Protection Law</a><time datetime="2024-12-09T02:55:34.000Z" title="发表于 2024-12-09 10:55:34">2024-12-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Yanjun Bi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br><div class="footer-beian"></div></div><a href="https://beian.mps.gov.cn/#/query/webSearch?code=150202000366" rel="noreferrer" target="_blank" style="background: url(/img/beian.png) no-repeat left center; background-size: 16px 16px; padding-left: 20px; margin-right: 15px;">蒙公网安备150202000366号</a><a href="https://beian.miit.gov.cn" target="_blank">蒙ICP备2025024138号</a></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
